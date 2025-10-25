@@ -5828,10 +5828,18 @@ hr.title-line {
 .bg-title {
   background-color: var(--title-color) !important;
 }
-
 .bg-title-dark {
-  background-color: #301934 !important;
+  background: linear-gradient(135deg, #301934, #3c1e49) !important;
+    animation: gradientMove 6s ease infinite;
+    background-size: 400% 400%;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 .gradient-body {
   background-image: -webkit-linear-gradient(349.38deg, rgba(249, 215, 175, 0.3) 0%, rgba(214, 202, 245, 0.3) 24.03%, rgba(198, 241, 255, 0.3) 45.73%, rgba(248, 242, 222, 0.3) 69.05%, rgba(212, 179, 253, 0.3) 100.44%);
@@ -30923,8 +30931,8 @@ span.select2-selection.select2-selection--single:focus {
   content: '';
   position: absolute;
   inset: 0;
-  background: -webkit-linear-gradient(top, #1C2D37 0%, rgba(28, 45, 55, 0.95) 51.5%, rgba(28, 45, 55, 0.6) 86.5%, #1C2D37 100%);
-  background: linear-gradient(180deg, #1C2D37 0%, rgba(28, 45, 55, 0.95) 51.5%, rgba(28, 45, 55, 0.6) 86.5%, #1C2D37 100%);
+  background: -webkit-linear-gradient(top, #1C2D37 0%, rgba(28, 45, 55, 0.55) 51.5%, rgba(28, 45, 55, 0.6) 86.5%, #1C2D37 100%);
+  background: linear-gradient(180deg, #1C2D37 0%, rgba(28, 45, 55, 0.55) 51.5%, rgba(28, 45, 55, 0.6) 86.5%, #1C2D37 100%);
   mix-blend-mode: multiply;
   opacity: 0.9;
   z-index: -1;
@@ -35919,7 +35927,16 @@ span.select2-selection.select2-selection--single:focus {
   width: 502px;
   height: 589px;
   object-fit: cover;
+  border-radius:20px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.about-wrap14 .about-thumb14-1 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
 
 @media (max-width: 767px) {
   .about-wrap14 .about-thumb14-1 {
@@ -36010,12 +36027,20 @@ span.select2-selection.select2-selection--single:focus {
   margin-top: -275px;
   /* Medium Large devices */
 }
-
 .about-wrap14 .about-thumb14-2 img {
   width: 404px;
   height: 450px;
   object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.about-wrap14 .about-thumb14-2 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
 
 @media (max-width: 1299px) {
   .about-wrap14 .about-thumb14-2 {
@@ -36854,6 +36879,13 @@ span.select2-selection.select2-selection--single:focus {
 .accordion-card.style2 .accordion-body .faq-thumb img {
   height: 100%;
   object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.accordion-card.style2 .accordion-body .faq-thumb img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 1199px) {
