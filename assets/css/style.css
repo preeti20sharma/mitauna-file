@@ -2689,7 +2689,7 @@ textarea.style2 {
 
 .form-group.style-radius .form-select,
 .form-group.style-radius .form-control {
-  border-radius: 50px;
+  border-radius: 15px;
   height: 60px;
 }
 
