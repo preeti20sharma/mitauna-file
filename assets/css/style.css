@@ -4015,7 +4015,7 @@ textarea.is-invalid {
   color: var(--title-color);
   -webkit-transition: 1s ease;
   transition: 1s ease;
-  padding: 20px 24px;
+  padding: 13px 17px;
 }
 
 .th-btn.btn-mask:hover, .th-btn.btn-mask:active, .th-btn.btn-mask:focus {
@@ -31848,7 +31848,7 @@ span.select2-selection.select2-selection--single:focus {
   border-radius: 16px;
   -webkit-align-content: end;
       -ms-flex-line-pack: end;
-          align-content: end;
+          align-content: start;
   top: 320px;
 }
 
@@ -42302,3 +42302,79 @@ span.select2-selection.select2-selection--single:focus {
 .right-content{
     margin-left: 30px !important;
 }
+
+.property-card {
+  position: relative;
+  border-radius: 35px 0 35px 0;
+  overflow: hidden;
+  height: 250px;
+  width:100%;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+.property-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+   animation: diagonalMove 10s ease-in-out infinite alternate;
+  transition: transform 0.6s ease;
+}
+
+
+@keyframes diagonalMove {
+  0% { background-position: left bottom; }
+  50% { background-position: right top; }
+  100% { background-position: left top; }
+}
+
+.property-card:hover .property-img {
+  transform: scale(1.2);
+}
+
+/* 🔥 Bottom Black Gradient Shadow */
+.property-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.property-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  z-index: 2; /* ensures text stays above the shadow */
+  color: #fff;
+  text-align: left;
+}
+
+.property-overlay h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color:#fff;
+}
+/* 
+.property-overlay p {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  color:#fff;
+} */
+
+.property-overlay a {
+  opacity: 0.9;
+}
+
