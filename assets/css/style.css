@@ -11066,11 +11066,11 @@ ol.wp-block-rss {
 .footer-default {
   --body-color: #A4B5BA;
 }
-
+/* 
 .footer-default .widget-area {
   padding-top: 120px;
   padding-bottom: 70px;
-}
+} */
 
 /* Footer Area 1---------------------------------- */
 .footer-layout1 {
@@ -17298,8 +17298,8 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .about-contact-grid.style2:hover .about-contact-icon {
-  background: var(--light-color);
-  border-color: var(--light-color);
+  background: #fcf3fe !important;
+  border-color: #fcf3fe !important;
   color: #301934;
 }
 
@@ -21370,7 +21370,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .service-card.style4:hover .service-card-icon {
-  background: var(--light-color);
+  background: #fcf3fe !important;
 }
 
 .service-card.style4:hover .service-card-icon img {
@@ -27768,9 +27768,9 @@ span.select2-selection.select2-selection--single:focus {
   }
   .img-box6 .about-tag {
     position: absolute;
-    left: 50px;
+    left: 44px;
     bottom: auto;
-    top: 20px;
+    top: -8px;
   }
   .img-box6 .about-tag .play-btn {
     --icon-size: 80px;
